@@ -1,0 +1,58 @@
+<script>
+
+    let nama_pegawai = "Ridwan";
+    let jabatan = "Manager";
+    let status = "Menikah";
+    
+
+if (jabatan == "Manager") 
+gaji_pokok = 15000000
+else if (jabatan == "Assisten Manager") 
+gaji_pokok = 10000000
+else if (jabatan == "Staff") gaji_pokok = 5000000
+else gaji_pokok = 0
+
+
+let tunjangan_jabatan = gaji_pokok * 0.15
+let BPJS = gaji_pokok * 0.1
+let tunjangan_keluarga = (status == "Menikah") ? gaji_pokok * 0.2 : 0
+total_gaji = gaji_pokok + tunjangan_jabatan - BPJS + tunjangan_keluarga
+
+
+
+
+    document.write("<h2 class='text-center' align='center'>Data Penggajian Pegawai</h2>");
+        document.write("<div class='table-center'><table border='1' cellpadding='10' cellspacing='0' align='center'>");
+        document.write("<thead>");
+        document.write("<tr bgcolor='pink'>");
+        document.write("<th>Nama Pegawai</th>");
+        document.write("<th>Jabatan</th>");
+        document.write("<th>Status</th>");
+        document.write("<th>Gaji Pokok</th>");
+        document.write("<th>Tunjangan Jabatan</th>");
+        document.write("<th>BPJS</th>");
+        document.write("<th>Tunjangan Keluarga</th>");
+        document.write("<th>Total Gaji</th>");
+        document.write("</tr>");
+        document.write("</thead>");
+        document.write("<tbody>");
+        document.write("<tr align='center'>");
+        document.write("<td>" + nama_pegawai + "</td>");
+        document.write("<td>" + jabatan + "</td>");
+        document.write("<td>" + status + "</td>");
+        document.write("<td>" + gaji_pokok + "</td>");
+        document.write("<td>" + tunjangan_jabatan + "</td>");
+        document.write("<td>" + BPJS + "</td>");
+        document.write("<td>" + tunjangan_keluarga + "</td>");
+        document.write("<td>" + total_gaji + "</td>");
+        document.write("</tr>");
+        document.write("</tbody>");
+        document.write("<tfoot>");
+        document.write("<tr>");
+        document.write("<td colspan='7' align='center'>Total Gaji</td>");
+        document.write("<td>" + total_gaji + "</td>");
+        document.write("</tr>");
+        document.write("</tfoot>");
+        document.write("</table></div>");
+
+</script>
